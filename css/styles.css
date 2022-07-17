@@ -10,6 +10,8 @@
     --dark-background-color: #2F303A;
     --button-background-color: #F5F4FA;
     --hero-button-hover-background-color: #188CE8;
+    --border-color:#EEEEEE;
+    --contact-color:rgba(255, 255, 255, 0.6);
 }
 h1, h2, h3, h4, p {
     margin-top: 0;
@@ -22,6 +24,8 @@ ul, ol {
 }
 img {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 .list {
     list-style: none;
@@ -166,6 +170,7 @@ body {
 /* ====================FEATURE================== */
 .suptitle { 
     margin-bottom: 10px;
+
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
@@ -204,13 +209,14 @@ body {
     background: var(--secondary-background-color);
 }
 .command-title {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
     padding-top: 30px;
     padding-bottom: 30px;
 }
 .command-suptitle {
     padding-bottom: 10px;
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
@@ -254,6 +260,7 @@ body {
     padding-left: 22px;
     border: none;
     border-radius: 4px;
+
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
@@ -272,7 +279,7 @@ body {
 .project-menu {
     display: flex;
     flex-wrap: wrap;
-    gap:30px;
+    gap:30px; 
 }
 .project-link {
     font-weight: 400;
@@ -281,16 +288,21 @@ body {
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
 }
+.project-menu .item {
+    /* flex-basis: calc((100%-60px)/3);  */
+}
 .project-title {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 22px;
-    padding-right: 22px;
-    border-left: 1px solid #EEEEEE;
-    border-right: 1px solid #EEEEEE;
-    border-bottom: 1px solid #EEEEEE;
+    
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
 }
 .project-suptitle {
+    margin-bottom: 4px;
+
     font-size: 18px;
     line-height: 2.00;
     letter-spacing: 0.06em;
@@ -330,11 +342,11 @@ body {
 .email-item {
     display: block;
     margin-bottom: 9px;
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--contact-color);
 }
 .phone-item {
     display: block;
-    color: rgba(255, 255, 255, 0.6); 
+    color: var(--contact-color); 
 }
 .adress-item:hover,
 .adress-item:focus {

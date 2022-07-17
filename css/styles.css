@@ -11,6 +11,18 @@
     --button-background-color: #F5F4FA;
     --hero-button-hover-background-color: #188CE8;
 }
+h1, h2, h3, h4, p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+ul, ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+img {
+    display: block;
+}
 .list {
     list-style: none;
 }
@@ -22,35 +34,39 @@ body {
     font-family: var(--primary-font);
     background: var(--main-background-color);
 }
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 /* =================COMPONENTS=============== */
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 .section-title {
+    margin-bottom: 50px;
+
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--title-color);
 }
-.portfolio-button {
-    font-family: inherit;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.63;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: var(--title-color);
-    background-color: var(--button-background-color);
-    cursor: pointer;
-}
-.portfolio-button:hover,
-.portfolio-button:focus {
-    background-color: var(--accent-color);
-    color: var(--secondary-text-color);
-}
+
 /* ===================HEADER================= */
-.page-header {
+.page-header {   
     background-color:var(--primary-background-color);
+    border-bottom: 1px solid #ececec;
+}
+.page-header-container {
+    display: flex;
+    align-items: center;
 }
 .logo-header {
+    margin-right: 93px;
     font-family: var(--secondary-font);
     font-weight: 700;
     font-size: 26px;
@@ -62,13 +78,19 @@ body {
     color: var(--accent-color);
 }    
 .menu-link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;    
-    color: var(--title-color);      
+    color: var(--title-color);    
 }
 .contact-link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -86,22 +108,47 @@ body {
 .current {
     color: var(--accent-color);
 }
+.menu {
+    display: flex;
+}
+.menu .item:not(:last-child) {
+    margin-right: 50px;
+}
+.contact {
+    display: flex;
+    margin-left: auto;
+}
+.contact .item:not(:last-child) {
+    margin-right: 50px;
+}
 /* =================/HEADER=================== */
 
 /* ===================HERO==================== */
 .hero {
+    text-align: center;
     background-color: var(--dark-background-color);
 }
 .hero-title {
-   font-weight: 900;
+    margin-left: 252px;
+    margin-right: 252px;
+    margin-bottom: 30px;
+
+    font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--secondary-text-color);
+    color: var(--secondary-text-color);    
 }
 .hero-button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 32px;
+    padding-right: 32px;
+    border-radius: 4px;
+
+    text-align: center;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
@@ -118,6 +165,7 @@ body {
 
 /* ====================FEATURE================== */
 .suptitle { 
+    margin-bottom: 10px;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
@@ -125,23 +173,44 @@ body {
     color: var(--title-color);
 }
 .menu-feature {
+    display: flex;
+   
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
 }
+.menu-feature .item {
+    width: 270px;
+}
+.menu-feature .item:not(:last-child) {
+    margin-right: 30px;
+}
 /* ====================/FEATURE================== */
 
 /* ====================SPESIALTY================= */
 
+.menu-specialty {
+    display: flex;
+}
+.menu-specialty .item:not(:last-child) {
+    margin-right: 30px;
+}
 /* ===================/SPESIALTY================= */
 
 /* ====================COMMAND=================== */
 .command {
     background: var(--secondary-background-color);
 }
+.command-title {
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
 .command-suptitle {
+    padding-bottom: 10px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
@@ -150,6 +219,8 @@ body {
     color: var(--title-color)
 }
 .menu-command {
+    display: flex;
+
     font-weight: 400;
     font-size: 16px;
     line-height: 1.19;
@@ -157,15 +228,67 @@ body {
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
 }
+.menu-command .item {
+    background: #FFFFFF;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.menu-command .item:not(:last-child) {
+    margin-right: 30px;
+}
 /* ===================/COMMAND=================== */
 
 /* ===================PROJECTS=================== */
+.button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.button .item:not(:last-child) {
+    margin-right: 8px;
+}
+.portfolio-button {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 22px;
+    padding-left: 22px;
+    border: none;
+    border-radius: 4px;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--title-color);
+    background-color: var(--button-background-color);
+    cursor: pointer;
+}
+.portfolio-button:hover,
+.portfolio-button:focus {
+    background-color: var(--accent-color);
+    color: var(--secondary-text-color);
+}
+.project-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap:30px;
+}
 .project-link {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
+}
+.project-title {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 22px;
+    padding-right: 22px;
+    border-left: 1px solid #EEEEEE;
+    border-right: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
 }
 .project-suptitle {
     font-size: 18px;
@@ -177,9 +300,13 @@ body {
 
 /* ===================FOOTER===================== */
 .page-footer {
-    background: var(--dark-background-color);     
+    background: var(--dark-background-color);
+    padding-top: 60px; 
+    padding-bottom: 60px;    
 }
 .logo-footer {
+    display: block;
+    margin-bottom: 20px;
     font-family: var(--secondary-font);
     font-weight: 700;
     font-size: 26px;
@@ -188,6 +315,7 @@ body {
     color: var(--secondary-text-color);
 }
 .menu-adress {
+    display: block;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -195,12 +323,17 @@ body {
     letter-spacing: 0.03em;
 }
 .adress-item {
+    display: block;
+    margin-bottom: 9px;
     color: var(--secondary-text-color);
 }
 .email-item {
+    display: block;
+    margin-bottom: 9px;
     color: rgba(255, 255, 255, 0.6);
 }
 .phone-item {
+    display: block;
     color: rgba(255, 255, 255, 0.6); 
 }
 .adress-item:hover,

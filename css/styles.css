@@ -131,6 +131,8 @@ body {
 .hero {
     text-align: center;
     background-color: var(--dark-background-color);
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 .hero-title {
     margin-left: 252px;
@@ -168,6 +170,9 @@ body {
 /* ====================/HERO==================== */
 
 /* ====================FEATURE================== */
+.feature {
+    padding-bottom: 47px;
+}
 .suptitle { 
     margin-bottom: 10px;
 
@@ -203,7 +208,9 @@ body {
     margin-right: 30px;
 }
 /* ===================/SPESIALTY================= */
-
+.specialty {
+    padding-top: 47px;
+}
 /* ====================COMMAND=================== */
 .command {
     background: var(--secondary-background-color);
